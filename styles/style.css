@@ -37,6 +37,11 @@ button{
     align-items: center;
     padding: 15px 0;
 }
+.bar-icon{
+    color: white;
+    font-size: 26px;
+    display: none;
+}
 .logo a{
     display: flex;
     justify-content: center;
@@ -370,6 +375,9 @@ button{
 .choose p{
     margin: 0 60px 0 20px;
 }
+.search-respon{
+    display: none;
+}
 .asset-card{
     position: absolute;
     top: 210%;
@@ -451,16 +459,21 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: scroll;
+}
+.card-wrap::-webkit-scrollbar{
+    display: none;
 }
 .card-img{
     width: 220px;
+    aspect-ratio: 16 / 9;
     text-align: center;
     color: white;
     border-radius: 10px;
 }
 .hover-hiden{
-    width: 100%;
-    height: 100%;
+    width: 220px;
+    aspect-ratio: 16 / 9;
     padding: 5px;
     border-radius: 21px;
     border: 3.5px solid rgb(0, 166, 255);
@@ -535,7 +548,7 @@ button{
     display: flex;
     gap: .65rem;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; 
 }
 .left-cate{
     flex: 50%;
@@ -631,6 +644,12 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: scroll;
+    gap: 3rem;
+    padding: 0 1.5rem;
+}
+.flex-collec::-webkit-scrollbar{
+    display: none;
 }
 .collec-image{
     display: flex;
@@ -815,7 +834,7 @@ button{
     padding: 0 30px;
     min-width: 44px;
     height: 44px;
-    border-radius: 8px;
+    border-radius: 5px;
     font-weight: 500;
     font-size: 17px;
     color: white;
@@ -886,12 +905,13 @@ button{
 .footer{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 1.5rem;
     padding: 2.5rem 0;
     border-bottom: 1px solid #9c9c9c;
 }
 .footer-menu{
-    width: 350px;
+    width: 330px;
     display: flex;
     flex-direction: column;
 }
@@ -997,4 +1017,217 @@ button{
 }
 .right-last a:hover{
     color: #777;
+}
+
+@media screen and (max-width: 768px){
+    .bar-icon{
+        display: block;
+    }
+    .logo{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .navigation{
+        padding: 10px 10px;
+    }
+    .respon-logo{
+        display: block;
+    }
+    .title h1{
+        font-size: 1.5rem;
+    }
+    .title p{
+        font-size: 15px;
+    }
+    .search-area{
+        display: none;
+    }
+    .img-upload{
+        display: none;
+    }
+    .search-respon{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: .2rem;
+    }
+    .search-respon-in{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+    .search-respon-in i{
+        font-size: 17px;
+    }
+    .search-respon-in .fa-magnifying-glass{
+        margin-right: 10px;
+    }
+    .search-respon-in .fa-image{
+        padding: 10px;
+        border-left: 1px solid #777;
+    }
+    .search-respon-in input{
+        width: 250px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+    .three-search-btn .btn3{
+        font-size: 12.45px;
+    }
+    .card-wrap{
+        padding: 0 10px;
+    }
+    .card-img{
+        width: 200px;
+        margin-right: 1.3rem;
+    }
+    .hover-hiden{
+        width: 200px;
+    }
+    .premium{
+        padding: 0 10px;
+    }
+    .cate-title{
+        padding: 0 10px;
+        margin: 1rem 0;
+    }
+    .cate-title h1{
+        font-size: 18px;
+    }
+    .cate-title p{
+        font-size: 13px;
+    }
+    .category-size{
+        padding: 0 10px;
+        flex-direction: column-reverse;
+    }
+    .right-cate{
+        order: 1;
+    }
+    .left-cate{
+        order: 2;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .right-cate-child{
+        border-radius: 5px;
+    }
+    .trending-title{
+        display: block;
+        padding: 0 10px;
+    }
+    .explore{
+        margin-top: 1rem;
+    }
+    .feature-title{
+        padding: 0 10px;
+    }
+    .feature-title h2{
+        font-size: 23px;
+    }
+    .feature-title p{
+        font-size: 17px;
+    }
+    .left-feature{
+        display: none;
+    }
+    .right-feature{
+        padding: 1rem;
+    }
+    .feature-list{
+        width: 100%;
+        align-items: start;
+        margin-bottom: 2rem;
+    }
+    .logo-feature{
+        font-size: 1.3rem;
+        padding: 1rem;
+        margin-top: 5px;
+    }
+    .text-feature h2{
+        font-size: 18px;
+    }
+    .text-feature p{
+        font-size: 13px;
+    }
+    .back-calendar{
+        height: 300px;
+    }
+    .calendar{
+        justify-content: start;
+        align-items: center;
+        padding: 3rem 1rem 0 1rem;
+    }
+    .left-calendar{
+        margin-left: 0;
+    }
+    .left-calendar p:nth-child(1){
+        width: 200px;
+        font-size: 20px;
+    }
+    .left-calendar p:nth-child(1) span{
+        font-size: 20px;
+    }
+    .left-calendar p:nth-child(2){
+        font-size: 20px;
+    }
+    .left-calendar p:nth-child(2) span{
+        font-size: 20px;
+    }
+    .right-calendar{
+        display: none;
+    }
+    .creator{
+        padding: 2rem;
+    }
+    .left-creator p:nth-child(1){
+        font-size: 20px;
+    }
+    .left-creator p:nth-child(2){
+        font-size: 14px;
+    }
+    .left-creator p:nth-child(1), .left-creator p:nth-child(2), .left-creator button{
+        margin-left: 0;
+    }
+    .sell-content{
+        padding: 10px 30px;
+        font-size: 15px;
+    }
+    .right-creator{
+        display: none;
+    }
+    .footer{
+        padding: 1rem;
+    }
+    .copyright{
+        flex-direction: column;
+        align-items: center;
+    }
+    .copy-text{
+        display: block;
+        text-align: center;
+    }
+    .copy-text p{
+        margin-top: .5rem;
+    }
+    .language{
+        margin-top: 1rem;
+    }
+    .last{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right-last a{
+        margin-top: 20px;
+        font-size: 15px;
+    }
 }
