@@ -8,10 +8,11 @@ body{
     font-family: 'Jost', sans-serif;
     /* height: 200vh; */
 }
-li , a{
-    list-style: none;
+a{
     text-decoration: none;
-    color: white;
+}
+li{
+    list-style: none;
 }
 button{
     cursor: pointer;
@@ -55,11 +56,19 @@ button{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
 }
 .menu ul li{
     font-weight: 500;
     font-size: 15px;
     cursor: pointer;
+}
+.menu ul #btn1, #btn2{
+    color: white;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
 }
 .menu ul li:hover a{
     color: #c2c2c2;
@@ -72,6 +81,11 @@ button{
 }
 .login .pricing{
     color: #ffd774 !important;
+    text-decoration: none;
+}
+.login a:nth-child(1){
+    text-decoration: none;
+    color: white;
 }
 .notif{
     background-color: transparent;
@@ -162,7 +176,7 @@ button{
 .pro-menu a{
     display: flex;
     gap: 10px;
-    color: #424242;
+    color: #424242 !important;
     transition: all 100ms;
 }
 .pro-menu a i{
@@ -170,7 +184,7 @@ button{
     transition: all 100ms;
 }
 .pro-menu a:hover{
-    color: #336aea;
+    color: #336aea !important;
 }
 .pro-menu a:hover i{
     color: #336aea;
@@ -207,16 +221,16 @@ button{
     font-size: 18px;
     padding: 7px 15px;
     border-radius: 5px;
-    color: #9c9c9c;
+    color: #9c9c9c !important;
     transition: background-color 100ms ;
 }
 .act{
-    background-color: #424242;
+    background-color: #424242 ;
     color: white !important;
 }
 .left-menu a:hover{
     background-color: #424242;
-    color: white;
+    color: white !important;
 }
 .rigth-menu{
     flex: 70%;
@@ -231,10 +245,10 @@ button{
     justify-content: space-between;
 }
 .one-side a{
-    color: #9c9c9c;
+    color: #9c9c9c !important;
 }
 .one-side a:hover{
-    color: white;
+    color: white !important;
 }
 .dot1{
     position: absolute;
@@ -268,7 +282,6 @@ button{
     display: flex;
     justify-content: space-between;
     width: 950px;
-    /* height: 320px; */
     background-color: #121212;
     border-radius: 10px;
     top: 150%;
@@ -288,6 +301,7 @@ button{
     font-weight: 600;
     color: #9c9c9c;
     padding: 0 14px;
+    margin-bottom: 0;
 }
 .card-menu i{
     font-size: 12px;
@@ -295,10 +309,12 @@ button{
 }
 .tell-lead{
     font-weight: 600;
+    margin-bottom: 0;
 }
 .tell{
     font-weight: 400;
     color: #9c9c9c;
+    margin-bottom: 0;
 }
 .card-menu:hover{
     background-color: #2c2c2c;
@@ -1005,6 +1021,7 @@ button{
 .last{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .left-last p{
     color: #777;
