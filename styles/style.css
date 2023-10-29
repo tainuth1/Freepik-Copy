@@ -25,12 +25,12 @@ button{
 .container-width{
     max-width: 1400px;
     margin: 0 auto;
-    /* background-color: blue; */
 }
 .top-container{
     background-color:#2f61d5;
-    /* background-image: url(/images/);
-    background-size: cover; */
+    background-image: none;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .navigation{
     display: flex;

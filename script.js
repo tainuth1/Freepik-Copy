@@ -94,3 +94,31 @@ chooseShow.addEventListener("click", function(event){
 document.addEventListener("click", function(){
     chooseShow.style.display = "none";
 });
+
+
+const imageOne = document.getElementById("hover-bg1");
+const imageTwo = document.getElementById("hover-bg2");
+const imageThree = document.getElementById("hover-bg3");
+const imageFour = document.getElementById("hover-bg4");
+const imageFive = document.getElementById("hover-bg5");
+var backContain = document.querySelector(".top-container");
+
+imageOne.addEventListener("mouseover", function(){
+    backContain.style.backgroundImage = `url(${imageOne.src})`;
+});
+imageTwo.addEventListener("mouseover", function(){
+    backContain.style.backgroundImage = `url(${imageTwo.src})`;
+});
+imageThree.addEventListener("mouseover", function(){
+    backContain.style.backgroundImage = `url(${imageThree.src})`;
+});
+imageFour.addEventListener("mouseover", function(){
+    backContain.style.backgroundImage = `url(${imageFour.src})`;
+});
+imageFive.addEventListener("mouseover", function(){
+    backContain.style.backgroundImage = `url(${imageFive.src})`;
+});
+
+backContain.addEventListener("mouseout", function(){
+    backContain.style.backgroundImage = "none";
+});

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 1rem;
+            border-radius: 10px;
+            background-color: dodgerblue;
+            display: flex;
+            justify-content: space-around;
+            align-items: end;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        img{
+            width: 200px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all .1s;
+        }
+        img:hover{
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="img1" src="https://www.goldderby.com/wp-content/uploads/2018/06/got-1.jpg?w=620" alt="">
+        <img id="img2" src="https://media.newyorker.com/photos/5cae6ad5671c64058676f05c/master/w_2560%2Cc_limit/Larson-GameofThronesPreview.jpg" alt="">
+        <img id="img3" src="https://media.cnn.com/api/v1/images/stellar/prod/230905105322-game-of-thrones-timeline-split.jpg?c=16x9&q=h_720,w_1280,c_fill" alt="">
+    </div>
+</body>
+<script>
+    const image1 = document.getElementById("img1");
+    const image2 = document.getElementById("img2");
+    const image3 = document.getElementById("img3");
+    var backGround = document.querySelector(".container");
+
+    let timeout;
+
+    function setDelayedBackgroundImage(src) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+          backGround.style.backgroundImage = `url(${src})`;
+        }, 3000);
+    }
+
+    image1.addEventListener("mouseover", function(){
+        backGround.style.backgroundImage = `url(${image1.src})`;
+    });
+    image2.addEventListener("mouseover", function(){
+        backGround.style.backgroundImage = `url(${image2.src})`;
+    });
+    image3.addEventListener("mouseover", function(){
+        backGround.style.backgroundImage = `url(${image3.src})`;
+    });
+
+    backGround.addEventListener('mouseout', function () {
+        backGround.style.backgroundImage = 'none';
+    });
+
+    document.querySelectorAll('.container img').forEach(function (img) {
+        img.addEventListener('mouseout', function () {
+          clearTimeout(timeout);
+          backGround.style.backgroundImage = 'none';
+        });
+    });
+</script>
+</html>
